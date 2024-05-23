@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+nav .logo-img {
+  height: 40px; /* Adjust height as needed */
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+nav .logo {
+  color: #C1DB37; /* Ganti dengan warna yang diinginkan */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+  padding-right: 30px; /* Added padding to the right */
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9em; /* Reduced font size */
+  font-weight: bold; /* Made text bold */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Additional CSS for the rest of the page */
+.welcome-section {
+  text-align: center;
+  padding: 210px 50px;
+  background-image: url('images/welcome-background.png');
+  background-size: cover;
+  background-position: center;
+  font-size: x-large;
+  color: #fff;
+}
+
+.berita-terkini, .galeri {
+  padding: 20px;
+  text-align: center;
+}
+
+.berita-terkini h2, .galeri h2 {
+  margin-top: 5%;
+}
+
+.berita-list, .galeri-list {
+  display: flex;
+  gap: 50px;
+}
+
+.berita-list article, .galeri-list img {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.berita-list img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.galeri-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.galeri-list img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .berita-list, .galeri-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .galeri-list {
+    grid-template-columns: 1fr;
+  }
+
+  .galeri-list img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h3 {
+  margin-top: 5%;
+}
+
+.kontak-kami, .lokasi-kami {
+  width: 40%;
+}
+
+.kontak-kami {
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.lokasi-kami iframe {
+  width: 300px; /* Ubah lebar sesuai kebutuhan */
+  height: 200px; /* Ubah tinggi sesuai kebutuhan */
+}
+
+.copyright {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-top: 3px solid #ddd;
+  font-size: 0.9em;
+}
